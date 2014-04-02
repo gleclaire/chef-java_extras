@@ -21,8 +21,8 @@ jdk_version = node['java']['jdk_version']
 java_home   = node['java']['java_home']
 source_dir  = "/usr/local/src"
 
-if jdk_version.to_i >= 7
-  Chef::Log.error("Java JDK 7 is not yet supported by the JCE Policy recipe")
+if jdk_version.to_i >= 8
+  Chef::Log.error("Java JDK 8 is not yet supported by the JCE Policy recipe")
 end
 
 bash "extract-jce-policy" do
